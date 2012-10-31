@@ -138,17 +138,18 @@ highlight link ZenkakuSpace Error
 match ZenkakuSpace /　/
 
 " move
-" ----------------------
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-map <C-Down> <C-F>
-map <C-Up> <C-B>
+ " ----------------------
+ nnoremap j gj
+ nnoremap k gk
+ set whichwrap=b,s,h,l,<,>,[,]
 
-""nnoremap j gj
-""nnoremap k gk
-set whichwrap=b,s,h,l,<,>,[,]
+ " When insert mode, enable hjkl and enable go to home/end.
+ imap <c-o> <END>
+ imap <c-a> <HOME>
+ imap <c-h> <LEFT>
+ imap <c-j> <DOWN>
+ imap <c-k> <UP>
+ imap <c-l> <Right>
 
 " search
 " ----------------------
