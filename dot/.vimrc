@@ -182,6 +182,11 @@ augroup BufferAu
 augroup END
 
 
+" Other
+" ---------------------
+set fileformats=unix,dos,mac
+set fileformat=unix
+
 " Plugin setting
 " --------------------
 
