@@ -196,8 +196,7 @@ let NERDTreeShowHidden = 1
 
 "Misc. settings
 syntax enable
-set background=dark
-colorscheme solarized
+colorscheme molokai
 
 highlight CursorLineNr guifg=#505050
 
