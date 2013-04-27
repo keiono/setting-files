@@ -2,7 +2,7 @@
 " .vimrc for Keiichiro Ono
 "
 " October 22, 2012
-" Rev. 0.1.0
+" Rev. 0.1.1
 
 " For Vundle
 set nocompatible
@@ -12,7 +12,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " My Bundles here:
-Bundle 'railscasts'
 Bundle 'fugitive.vim'
 Bundle 'surround.vim'
 Bundle 'mru.vim'
@@ -25,9 +24,9 @@ Bundle 'AutoClose'
 Bundle 'Markdown'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
-
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-rails'
+Bundle 'Shougo/vimshell'
+Bundle 'python.vim'
+Bundle 'taglist.vim'
 
 " JavaScript Plugins
 Bundle 'JavaScript-syntax'
@@ -123,7 +122,7 @@ set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%04l,%04v][%p%%]\ [L
 " ----------------------
 set autoindent
 set smartindent
-"set expandtab
+set expandtab
 set smarttab
 set tabstop=2 shiftwidth=2 softtabstop=0
 set showmatch " show mactch brace

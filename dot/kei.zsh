@@ -20,3 +20,4 @@ bindkey "^[[3~" delete-char # Del
 #autoload predict-on
 #predict-on
 
+alias macvim="mvim --remote-tab-silent"
