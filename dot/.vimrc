@@ -35,7 +35,7 @@ Bundle 'vim-scripts/prettyprint.vim.git'
 Bundle 'mru.vim'
 Bundle 'The-NERD-tree'
 Bundle 'The-NERD-Commenter'
-Bundle 'EasyMotion'
+Bundle 'Lokaltog/vim-easymotion'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'AutoClose'
@@ -215,3 +215,10 @@ syntax enable
 colorscheme molokai
 
 highlight CursorLineNr guifg=#505050
+
+" EasyMotion
+let g:EasyMotion_keys='hjklasdfgyuiopqwertnmzxcvbHJKLASDFGYUIOPQWERTNMZXCVB'
+let g:EasyMotion_leader_key=";"
+let g:EasyMotion_grouping=1
+hi EasyMotionTarget ctermbg=none ctermfg=red
+hi EasyMotionShade  ctermbg=none ctermfg=white
