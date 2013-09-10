@@ -43,6 +43,7 @@ Bundle 'Shougo/vimshell'
 Bundle 'python.vim'
 
 Bundle 'taglist.vim'
+Bundle 'sandeepcr529/Buffet.vim'
 
 " Markdown
 Bundle 'tpope/vim-markdown.git'
@@ -124,6 +125,7 @@ let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 
 " Display Settings
 set cursorline
+set hlsearch
 set number
 set numberwidth=4
 set spell
@@ -216,3 +218,9 @@ let g:EasyMotion_leader_key=";"
 let g:EasyMotion_grouping=1
 hi EasyMotionTarget ctermbg=none ctermfg=red
 hi EasyMotionShade  ctermbg=none ctermfg=white
+
+" Misc settings
+nnoremap <silent><Space>j    :Explore<CR>
+
+nnoremap <silent><Space>l    :Bufferlist<CR>
+nnoremap <silent><Space>s    :<C-u>update<CR>

@@ -9,7 +9,7 @@ colorscheme molokai
 set showtabline=4
 set transparency=0
 
-set guifont=Source\ Code\ Pro:h22
+set guifont=Source\ Code\ Pro\ Light:h22
 
 set guioptions-=T " no tool bar
 set guioptions-=m " no menu bar
@@ -22,5 +22,3 @@ if s:ext=="safari"
     set columns=120
     set lines=80
 end
-
-
