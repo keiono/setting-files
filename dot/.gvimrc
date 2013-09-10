@@ -9,7 +9,7 @@ colorscheme molokai
 set showtabline=4
 set transparency=0
 
-set guifont=Source\ Code\ Pro\ Light:h22
+set guifont=Source\ Code\ Pro\ Light:h20
 
 set guioptions-=T " no tool bar
 set guioptions-=m " no menu bar

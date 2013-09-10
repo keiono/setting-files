@@ -1,12 +1,14 @@
+"
 " Personalized .vimrc by Keiichiro Ono
 "
-" September 9, 2013
-" Rev. 0.1.3
+" September 10, 2013
+"
+" Rev. 0.1.4
 
 set nocompatible
 filetype off
 
-" For Vundle
+" Plugin management by Vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
@@ -130,7 +132,7 @@ set number
 set numberwidth=4
 set spell
 set spelllang=en_us
-set textwidth=100
+set textwidth=0
 set showmode " show mode
 set title " show filename
 set ruler
@@ -140,12 +142,14 @@ set laststatus=3
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 
 " edit
+set history=10000
+set wrapscan
 set autoindent
 set smartindent
 set expandtab
 set smarttab
 set tabstop=4 shiftwidth=4 softtabstop=0
-set showmatch " show mactch brace
+set showmatch " show match brace
 set wildmenu
 set clipboard=unnamed " share OS clipboard
 set autoread
@@ -199,28 +203,23 @@ augroup END
 set fileformats=unix,dos,mac
 set fileformat=unix
 
-" Plugin setting
-" --------------------
-
 " NEED Commenter
 let NERDShutUp = 1 "no alart undfined filetype
 let NERDTreeShowHidden = 1
 
-"Misc. settings
 syntax enable
 colorscheme molokai
 
 highlight CursorLineNr guifg=#505050
 
-" EasyMotion
+" EasyMotion Plugin settings
 let g:EasyMotion_keys='hjklasdfgyuiopqwertnmzxcvbHJKLASDFGYUIOPQWERTNMZXCVB'
 let g:EasyMotion_leader_key=";"
 let g:EasyMotion_grouping=1
 hi EasyMotionTarget ctermbg=none ctermfg=red
 hi EasyMotionShade  ctermbg=none ctermfg=white
 
-" Misc settings
+" File list
 nnoremap <silent><Space>j    :Explore<CR>
-
 nnoremap <silent><Space>l    :Bufferlist<CR>
 nnoremap <silent><Space>s    :<C-u>update<CR>
