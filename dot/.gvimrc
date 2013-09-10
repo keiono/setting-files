@@ -1,17 +1,15 @@
-"display settings for gvim
-" for Mac.
-" ----------------------
+" display settings for gvim for Mac.
 
 set columns=120
-set lines=60
+set lines=80
 
 set antialias
 colorscheme molokai
 
 set showtabline=4
-set transparency=2
+set transparency=0
 
-set guifont=Menlo\ Regular:h18
+set guifont=Source\ Code\ Pro:h22
 
 set guioptions-=T " no tool bar
 set guioptions-=m " no menu bar
@@ -21,8 +19,8 @@ set guioptions-=l " no left scrollbar
 set guioptions-=L " no left scrollbar
 
 if s:ext=="safari"
-set columns=120
-set lines=60
+    set columns=120
+    set lines=80
 end
 
 

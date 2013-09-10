@@ -1,8 +1,7 @@
-"
-" .vimrc for Keiichiro Ono
+" Personalized .vimrc by Keiichiro Ono
 "
 " September 9, 2013
-" Rev. 0.1.2
+" Rev. 0.1.3
 
 set nocompatible
 filetype off
@@ -32,13 +31,12 @@ Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'nelstrom/vim-docopen'
 Bundle 'vim-scripts/prettyprint.vim.git'
 
-Bundle 'mru.vim'
+Bundle 'vim-scripts/mru.vim'
 Bundle 'The-NERD-tree'
 Bundle 'The-NERD-Commenter'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
-Bundle 'AutoClose'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
 Bundle 'Shougo/vimshell'
@@ -78,10 +76,10 @@ let g:neocomplcache_enable_smart_case = 1
 
 " Define dictionary.
 let g:neocomplcache_dictionary_filetype_lists = {
-    \ 'default' : '',
-    \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ 'scheme' : $HOME.'/.gosh_completions'
-    \ }
+      \ 'default' : '',
+      \ 'vimshell' : $HOME.'/.vimshell_hist',
+      \ 'scheme' : $HOME.'/.gosh_completions'
+      \ }
 
 " Define keyword.
 if !exists('g:neocomplcache_keyword_patterns')
@@ -124,19 +122,22 @@ let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 
 
-" display
-" ----------------------
-set number " show line number
+" Display Settings
+set cursorline
+set number
+set numberwidth=4
+set spell
+set spelllang=en_us
+set textwidth=100
 set showmode " show mode
 set title " show filename
 set ruler
 set list
 set listchars=tab:>-,trail:-,extends:>,precedes:< " eol:$
-set laststatus=2
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+set laststatus=3
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 
 " edit
-" ----------------------
 set autoindent
 set smartindent
 set expandtab
@@ -154,21 +155,19 @@ highlight link ZenkakuSpace Error
 match ZenkakuSpace /　/
 
 " move
- " ----------------------
- nnoremap j gj
- nnoremap k gk
- set whichwrap=b,s,h,l,<,>,[,]
+nnoremap j gj
+nnoremap k gk
+set whichwrap=b,s,h,l,<,>,[,]
 
- " When insert mode, enable hjkl and enable go to home/end.
- imap <c-o> <END>
- imap <c-a> <HOME>
- imap <c-h> <LEFT>
- imap <c-j> <DOWN>
- imap <c-k> <UP>
- imap <c-l> <Right>
+" When insert mode, enable hjkl and enable go to home/end.
+imap <c-o> <END>
+imap <c-a> <HOME>
+imap <c-h> <LEFT>
+imap <c-j> <DOWN>
+imap <c-k> <UP>
+imap <c-l> <Right>
 
 " search
-" ----------------------
 set incsearch
 set ignorecase
 set smartcase
@@ -178,28 +177,23 @@ set visualbell
 set t_vb=
 
 " backup
-" --------------------
 set backup
 set backupdir=~/.vim/vim_backup
 set swapfile
 set directory=~/.vim/vim_swap
 
 " key map
-" --------------------
 let mapleader = ","
 noremap <CR> o<ESC>
 
 " auto command
-" --------------------
 augroup BufferAu
-   autocmd!
-   " change current directory
-   autocmd BufNewFile,BufRead,BufEnter * if isdirectory(expand("%:p:h")) && bufname("%") !~ "NERD_tree" | cd %:p:h | endif
+  autocmd!
+  " change current directory
+  autocmd BufNewFile,BufRead,BufEnter * if isdirectory(expand("%:p:h")) && bufname("%") !~ "NERD_tree" | cd %:p:h | endif
 augroup END
 
-
 " Other
-" ---------------------
 set fileformats=unix,dos,mac
 set fileformat=unix
 
