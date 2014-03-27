@@ -30,9 +30,9 @@ ZSH_THEME="blinks"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
-plugins=(git git-flow github macports node npm osx ssh-agent svn vi-mode)
+plugins=(git git-flow github brew python node npm osx ssh-agent svn vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/kono/Documents/jruby-1.5.1/bin:/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/bin
+export PATH=/usr/local/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
