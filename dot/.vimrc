@@ -1,9 +1,9 @@
 "
 " Personalized .vimrc by Keiichiro Ono
 "
-" September 10, 2013
+" 3/26/2014
 "
-" Rev. 0.1.4
+" Rev. 0.2.0
 
 set nocompatible
 filetype off
@@ -11,7 +11,9 @@ filetype off
 " Plugin management by Vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+
 Bundle 'gmarik/vundle'
+
 filetype plugin indent on
 
 " Plugins
@@ -41,6 +43,7 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
+Bundle 'Shougo/neosnippet-snippets'
 Bundle 'Shougo/vimshell'
 Bundle 'python.vim'
 
@@ -59,12 +62,7 @@ Bundle 'thinca/vim-quickrun.git'
 Bundle 'tomtom/checksyntax_vim'
 
 " For color scheme
-Bundle 'vim-scripts/CSApprox'
 Bundle 'project.tar.gz'
-
-" Indent visualization
-Bundle 'nathanaelkane/vim-indent-guides'
-
 
 " Syntastic Settings
 let g:syntastic_enable_signs=1
