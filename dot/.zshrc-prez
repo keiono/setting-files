@@ -1,0 +1,38 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+alias l='ls -alh'
+
+if [ -f /usr/bin/virtualenvwrapper.sh ]; then
+    export WORKON_HOME=$HOME/.virtualenvs
+      source /usr/local/bin/virtualenvwrapper.sh
+    fi
+
+# Java Settings
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home
+
+# Customize to your needs...
+export PATH="/Users/kono/anaconda/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/kono/.rvm/bin:/Users/kono/bin"
+
+# For boot2docker 
+export DOCKER_TLS_VERIFY=1
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/kono/.boot2docker/certs/boot2docker-vm
+
+# For CalVR
+export CALVR_HOME=/Users/kono/git/CalVR/calvr
+export CALVR_CONFIG_FILE=config.xml
+export DYLD_LIBRARY_PATH=/Users/kono/git/CalVR/calvr/lib
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
