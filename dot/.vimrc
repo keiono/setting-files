@@ -1,127 +1,69 @@
 "
 " Personalized .vimrc by Keiichiro Ono
 "
-" 3/26/2014
+" 4/17/2015
 "
-" Rev. 0.2.0
+" Rev. 0.3.0
 
 set nocompatible
 filetype off
 
-" Plugin management by Vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
-
-filetype plugin indent on
+Plugin 'gmarik/Vundle.vim'
 
 " Plugins
-Bundle 'tpope/vim-abolish.git'
-Bundle 'tpope/vim-characterize.git'
-Bundle 'tpope/vim-commentary.git'
-Bundle 'tpope/vim-dispatch.git'
-Bundle 'tpope/vim-eunuch.git'
-Bundle 'tpope/vim-fugitive.git'
-Bundle 'tpope/vim-ragtag.git'
-Bundle 'tpope/vim-repeat.git'
-Bundle 'tpope/vim-scriptease.git'
-Bundle 'tpope/vim-sensible.git'
-Bundle 'tpope/vim-sleuth.git'
-Bundle 'tpope/vim-surround.git'
-Bundle 'tpope/vim-tbone.git'
-Bundle 'tpope/vim-unimpaired.git'
-Bundle 'nelstrom/vim-visual-star-search'
-Bundle 'nelstrom/vim-docopen'
-Bundle 'vim-scripts/prettyprint.vim.git'
+Plugin 'tpope/vim-abolish.git'
+Plugin 'tpope/vim-characterize.git'
+Plugin 'tpope/vim-commentary.git'
+Plugin 'tpope/vim-dispatch.git'
+Plugin 'tpope/vim-eunuch.git'
+Plugin 'tpope/vim-fugitive.git'
+Plugin 'tpope/vim-ragtag.git'
+Plugin 'tpope/vim-repeat.git'
+Plugin 'tpope/vim-scriptease.git'
+Plugin 'tpope/vim-sensible.git'
+Plugin 'tpope/vim-sleuth.git'
+Plugin 'tpope/vim-surround.git'
+Plugin 'tpope/vim-tbone.git'
+Plugin 'tpope/vim-unimpaired.git'
+Plugin 'nelstrom/vim-visual-star-search'
+Plugin 'nelstrom/vim-docopen'
+Plugin 'vim-scripts/prettyprint.vim.git'
 
-Bundle 'vim-scripts/mru.vim'
-Bundle 'The-NERD-tree'
-Bundle 'The-NERD-Commenter'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/neosnippet'
-Bundle 'Shougo/neosnippet-snippets'
-Bundle 'Shougo/vimshell'
-Bundle 'python.vim'
+Plugin 'vim-scripts/mru.vim'
+Plugin 'The-NERD-tree'
+Plugin 'The-NERD-Commenter'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+Plugin 'Shougo/vimshell'
+Plugin 'python.vim'
 
-Bundle 'taglist.vim'
-Bundle 'sandeepcr529/Buffet.vim'
+Plugin 'taglist.vim'
+Plugin 'sandeepcr529/Buffet.vim'
 
 " Markdown
-Bundle 'tpope/vim-markdown.git'
-Bundle 'nelstrom/vim-markdown-folding.git'
+Plugin 'tpope/vim-markdown.git'
+Plugin 'nelstrom/vim-markdown-folding.git'
 
 " JavaScript Plugins
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'pangloss/vim-javascript'
-Bundle 'JavaScript-Indent'
-Bundle 'thinca/vim-quickrun.git'
-Bundle 'tomtom/checksyntax_vim'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'pangloss/vim-javascript'
+Plugin 'JavaScript-Indent'
+Plugin 'thinca/vim-quickrun.git'
+Plugin 'tomtom/checksyntax_vim'
 
 " For color scheme
 Bundle 'project.tar.gz'
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 
 " Syntastic Settings
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=2
-
-" neocomplcache settings
-" ------------------------
-" Use neocomplcache.
-let g:neocomplcache_enable_at_startup = 1
-" Use smartcase.
-let g:neocomplcache_enable_smart_case = 1
-
-" Define dictionary.
-let g:neocomplcache_dictionary_filetype_lists = {
-      \ 'default' : '',
-      \ 'vimshell' : $HOME.'/.vimshell_hist',
-      \ 'scheme' : $HOME.'/.gosh_completions'
-      \ }
-
-" Define keyword.
-if !exists('g:neocomplcache_keyword_patterns')
-  let g:neocomplcache_keyword_patterns = {}
-endif
-let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
-
-
-" Plugin key-mappings.
-imap <C-k>     <Plug>(neocomplcache_snippets_expand)
-smap <C-k>     <Plug>(neocomplcache_snippets_expand)
-inoremap <expr><C-g>     neocomplcache#undo_completion()
-inoremap <expr><C-l>     neocomplcache#complete_common_string()
-
-" Recommended key-mappings.
-" <CR>: close popup and save indent.
-inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y>  neocomplcache#close_popup()
-inoremap <expr><C-e>  neocomplcache#cancel_popup()
-
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-" Enable heavy omni completion.
-if !exists('g:neocomplcache_omni_patterns')
-  let g:neocomplcache_omni_patterns = {}
-endif
-let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
-let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
-let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
-
 
 " Display Settings
 set cursorline
