@@ -13,7 +13,14 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-" Plugins
+" ------------ Plugins ---------------
+
+" For Dash
+Plugin 'rizzatti/dash.vim'
+
+" For Python Development
+Plugin 'davidhalter/jedi-vim'
+
 Plugin 'tpope/vim-abolish.git'
 Plugin 'tpope/vim-characterize.git'
 Plugin 'tpope/vim-commentary.git'
@@ -39,7 +46,6 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'L9'
 Plugin 'FuzzyFinder'
 Plugin 'Shougo/vimshell'
-Plugin 'python.vim'
 
 Plugin 'taglist.vim'
 Plugin 'sandeepcr529/Buffet.vim'
@@ -47,6 +53,9 @@ Plugin 'sandeepcr529/Buffet.vim'
 " Markdown
 Plugin 'tpope/vim-markdown.git'
 Plugin 'nelstrom/vim-markdown-folding.git'
+
+" rst Document support
+Bundle 'Rykka/riv.vim'
 
 " JavaScript Plugins
 Plugin 'jelera/vim-javascript-syntax'
@@ -59,7 +68,6 @@ Plugin 'tomtom/checksyntax_vim'
 Bundle 'project.tar.gz'
 call vundle#end()            " required
 filetype plugin indent on    " required
-
 
 " Syntastic Settings
 let g:syntastic_enable_signs=1
