@@ -1,17 +1,17 @@
 "
 " Personalized .vimrc by Keiichiro Ono
 "
-" 4/17/2015
+" 5/4/2015
 "
-" Rev. 0.3.0
+" Rev. 0.4.0
 
+" -------- Enable Vundle ------------
 set nocompatible
 filetype off
-
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
 Plugin 'gmarik/Vundle.vim'
+
 
 " ------------ Plugins ---------------
 
@@ -74,10 +74,16 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=2
 
 " Display Settings
+syntax enable
+colorscheme molokai
+
 set cursorline
-set hlsearch
+set colorcolumn=80
 set number
 set numberwidth=4
+set shiftround
+set infercase
+set virtualedit=all
 set spell
 set spelllang=en_us
 set textwidth=0
@@ -85,7 +91,8 @@ set showmode " show mode
 set title " show filename
 set ruler
 set list
-set listchars=tab:>-,trail:-,extends:>,precedes:< " eol:$
+" set listchars=tab:>-,trail:-,extends:>,precedes:< " eol:$
+set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲
 set laststatus=3
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 
@@ -125,16 +132,16 @@ imap <c-l> <Right>
 set incsearch
 set ignorecase
 set smartcase
+set hlsearch
 
 " no bell
 set visualbell
 set t_vb=
 
-" backup
-set backup
-set backupdir=~/.vim/vim_backup
-set swapfile
-set directory=~/.vim/vim_swap
+" Disable backup & swap
+set nowritebackup
+set nobackup
+set noswapfile
 
 " key map
 let mapleader = ","
@@ -154,9 +161,6 @@ set fileformat=unix
 " NEED Commenter
 let NERDShutUp = 1 "no alart undfined filetype
 let NERDTreeShowHidden = 1
-
-syntax enable
-colorscheme molokai
 
 highlight CursorLineNr guifg=#505050
 

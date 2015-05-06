@@ -13,6 +13,9 @@ fi
 # Customize to your needs...
 alias l='ls -alh'
 alias vi='vim'
+alias dc='docker-compose'
+alias dm='docker-machine'
+alias ps='ps aux'
 
 # Java Settings
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home
