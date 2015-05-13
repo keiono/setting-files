@@ -35,4 +35,8 @@ export CALVR_HOME=/Users/kono/git/CalVR/calvr
 export CALVR_CONFIG_FILE=config.xml
 export DYLD_LIBRARY_PATH=/Users/kono/git/CalVR/calvr/lib
 
+# For GO
+export GOPATH=~/go
+export PATH=$PATH:~/go/bin
+
 export LC_ALL=en_US.UTF-8
