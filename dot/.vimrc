@@ -20,6 +20,7 @@ Plugin 'rizzatti/dash.vim'
 
 " For Python Development
 Plugin 'davidhalter/jedi-vim'
+Plugin 'nvie/vim-flake8'
 
 Plugin 'tpope/vim-abolish.git'
 Plugin 'tpope/vim-characterize.git'

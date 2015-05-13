@@ -13,6 +13,8 @@ fi
 # Customize to your needs...
 alias l='ls -alh'
 alias vi='vim'
+
+alias d='docker'
 alias dc='docker-compose'
 alias dm='docker-machine'
 alias ps='ps aux'
