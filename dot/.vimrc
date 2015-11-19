@@ -84,7 +84,7 @@ set numberwidth=4
 set shiftround
 set infercase
 set virtualedit=all
-set spell
+"set spell
 set spelllang=en_us
 set textwidth=0
 set showmode " show mode
