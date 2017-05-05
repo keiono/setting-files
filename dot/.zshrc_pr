@@ -6,7 +6,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-alias l='ls -alh'
+alias l='ls -alht'
 alias vi='vim'
 
 alias d='docker'
@@ -14,20 +14,26 @@ alias dc='docker-compose'
 alias dm='docker-machine'
 alias ps='ps aux'
 alias d='docker'
+alias bu='brew update && brew upgrade'
 
 # Java Settings
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
 
 # Customize to your needs...
 export PATH="/Users/kono/anaconda/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/kono/.rvm/bin:/Users/kono/bin"
-
-# For CalVR
-export CALVR_HOME=/Users/kono/git/CalVR/calvr
-export CALVR_CONFIG_FILE=config.xml
-export DYLD_LIBRARY_PATH=/Users/kono/git/CalVR/calvr/lib
 
 # For GO
 export GOPATH=~/git/go
 export PATH=$PATH:$GOROOT/bin
 
 export LC_ALL=en_US.UTF-8
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f /Users/kono/tools/google-cloud-sdk/path.zsh.inc ]; then
+  source '/Users/kono/tools/google-cloud-sdk/path.zsh.inc'
+fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f /Users/kono/tools/google-cloud-sdk/completion.zsh.inc ]; then
+  source '/Users/kono/tools/google-cloud-sdk/completion.zsh.inc'
+fi
