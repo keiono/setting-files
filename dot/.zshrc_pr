@@ -5,6 +5,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+export TERM="xterm-256color"
+
 # Customize to your needs...
 alias l='ls -alht'
 alias vi='vim'
@@ -13,27 +15,19 @@ alias d='docker'
 alias dc='docker-compose'
 alias dm='docker-machine'
 alias ps='ps aux'
-alias d='docker'
-alias bu='brew update && brew upgrade'
+
+alias t="tmux"
 
 # Java Settings
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
-
-# Customize to your needs...
-export PATH="/Users/kono/anaconda/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/kono/.rvm/bin:/Users/kono/bin"
-
-# For GO
-export GOPATH=~/git/go
-export PATH=$PATH:$GOROOT/bin
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
 
 export LC_ALL=en_US.UTF-8
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f /Users/kono/tools/google-cloud-sdk/path.zsh.inc ]; then
-  source '/Users/kono/tools/google-cloud-sdk/path.zsh.inc'
-fi
 
-# The next line enables shell command completion for gcloud.
-if [ -f /Users/kono/tools/google-cloud-sdk/completion.zsh.inc ]; then
-  source '/Users/kono/tools/google-cloud-sdk/completion.zsh.inc'
-fi
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+export PATH="$HOME/.local/bin:$PATH"
+export PIPENV_VENV_IN_PROJECT=1

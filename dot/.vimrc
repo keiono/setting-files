@@ -48,7 +48,6 @@ Plugin 'L9'
 Plugin 'FuzzyFinder'
 Plugin 'Shougo/vimshell'
 
-Plugin 'taglist.vim'
 Plugin 'sandeepcr529/Buffet.vim'
 
 " Markdown
@@ -76,7 +75,7 @@ let g:syntastic_auto_loc_list=2
 
 " Display Settings
 syntax enable
-colorscheme molokai
+colorscheme monokai
 
 set cursorline
 set colorcolumn=80
